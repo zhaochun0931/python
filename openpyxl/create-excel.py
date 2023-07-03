@@ -22,6 +22,16 @@ ws.cell(10,8).value = 400
 
 
 
+# create 5 sheets in this xlsx file
+for i in range(1,5):
+    wb.create_sheet(f"mysheet{i}")
+
+
+# input the current datetime to the cell of C6
+for i in wb.sheetnames:
+    ws = wb[i]
+    ws.cell(1,1).value= i
+
 # print all the sheets names in this workbook
 print(wb.sheetnames)
 
