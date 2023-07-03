@@ -1,4 +1,5 @@
 from openpyxl import Workbook
+from openpyxl import load_workbook
 import datetime
 
 # create a new xlsx file and a default sheet
@@ -41,3 +42,19 @@ print(wb.sheetnames)
 now = datetime.datetime.now()
 file_name = now.strftime("%Y-%m-%d-%H-%M-%S")
 wb.save(f"{file_name}.xlsx")
+wb.save("demo.xlsx")
+
+
+
+
+
+
+# open an existing xlsx file
+
+wb = load_workbook('demo.xlsx')
+
+for i in wb.sheetnames:
+    ws = wb[i]
+    print("the max column of this sheet is ", ws.max_column)
+    print("the max row of this sheet is ",  ws.max_row)
+    print()
