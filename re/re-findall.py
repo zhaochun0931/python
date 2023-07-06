@@ -15,3 +15,23 @@ for i in xx:
 # 10
 # 11
 # 100
+
+
+
+
+
+
+txt = "hello this is a demo test"
+
+xx = re.findall('is.',txt)
+print(xx)
+# ['is ', 'is ']
+
+
+xx = re.findall('is.*',txt)
+print(xx)
+# ['is is a demo test']
+
+xx = re.findall("is.*?",txt)
+print(xx)
+# ['is', 'is']
