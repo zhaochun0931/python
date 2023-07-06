@@ -1,6 +1,7 @@
 import re
 
-xx = re.findall("\d+","age=10,no=11,score=100")
+txt = "age=10,no=11,score=100"
+xx = re.findall("\d+",txt)
 print(xx)
 
 # ['10', '11', '100']
