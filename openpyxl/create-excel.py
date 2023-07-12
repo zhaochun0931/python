@@ -22,6 +22,9 @@ ws.cell(row=3, column=3).value = 300
 ws.cell(10,8).value = 400
 
 
+# merge some cells
+ws.merge_cells('C2:D5')
+
 
 # create 5 sheets in this xlsx file
 for i in range(1,5):
