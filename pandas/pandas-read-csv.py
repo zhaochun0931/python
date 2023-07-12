@@ -11,3 +11,11 @@ print(df.to_string())
 
 # If you have a large DataFrame with many rows, Pandas will only return the first 5 rows, and the last 5 rows:
 print(df)
+
+print(df.head(10))
+
+print(df.head())
+
+print(df.tail())
+
+print(df.info())
