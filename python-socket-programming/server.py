@@ -3,7 +3,11 @@ import time
 
 xx = socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 
-host = '127.0.0.1'
+# it will cause the remote server cannot connect to this host with the port 8080
+# host = '127.0.0.1'
+
+# listening on any interface
+host = ''
 # host = ''
 
 
