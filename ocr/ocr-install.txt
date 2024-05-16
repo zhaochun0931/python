@@ -1,0 +1,5 @@
+pip3 install pytesseract
+
+brew install tesseract
+
+
