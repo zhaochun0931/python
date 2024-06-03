@@ -1,3 +1,5 @@
+# this is a very simple demo to print the page number of the pdf
+
 from PyPDF2 import PdfReader
 
 reader = PdfReader("example.pdf")
@@ -7,3 +9,4 @@ first_page = reader.pages[0]
 text = first_page.extract_text()
 
 print("the page of this pdf is: ", number_of_pages)
+
