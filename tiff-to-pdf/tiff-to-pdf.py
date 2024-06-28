@@ -1,3 +1,4 @@
+import os
 from PIL import Image
 from reportlab.pdfgen import canvas
 
@@ -38,8 +39,29 @@ def convert_tiff_to_pdf(tiff_path, pdf_path):
         print(f"Error converting TIFF to PDF: {e}")
 
 
-# Example usage:
-tif_file = 'example.tif'
-pdf_file = 'example.pdf'
+def convert_all_tiffs_in_directory():
+    try:
+        # Get the current directory
+        current_dir = os.getcwd()
 
-convert_tiff_to_pdf(tif_file, pdf_file)
+        # List all files in the current directory
+        files = os.listdir(current_dir)
+
+        # Filter for TIFF files
+        tiff_files = [f for f in files if f.endswith('.tif') or f.endswith('.tiff')]
+
+        # Iterate over TIFF files and convert each one
+        for tiff_file in tiff_files:
+            tiff_path = os.path.join(current_dir, tiff_file)
+            pdf_file = os.path.splitext(tiff_file)[0] + '.pdf'
+            pdf_path = os.path.join(current_dir, pdf_file)
+
+            # Convert TIFF to PDF
+            convert_tiff_to_pdf(tiff_path, pdf_path)
+
+    except Exception as e:
+        print(f"Error converting TIFF files in directory: {e}")
+
+
+# Call the function to convert all TIFF files in the current directory to PDF
+convert_all_tiffs_in_directory()
