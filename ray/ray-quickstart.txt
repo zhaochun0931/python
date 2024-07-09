@@ -6,10 +6,6 @@ done
 
 
 
-for i in 1 2 3
-do
-docker inspect -f "{{ .NetworkSettings.IPAddress }}" node$i
-done
 
 
 
@@ -22,3 +18,16 @@ for i in 1 2 3
 do
 docker run -it --rm -d --name node$i  ray
 done
+
+
+
+
+for i in 1 2 3
+do
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" node$i
+done
+
+
+
+
+
