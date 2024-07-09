@@ -30,12 +30,11 @@ done
 
 
 node1:
-
 ray start --head --node-ip-address 172.17.0.2
 
 
 node2 and node3:
-
+  To add another node to this Ray cluster, run
 ray start --address='172.17.0.2:6379'
 
 
