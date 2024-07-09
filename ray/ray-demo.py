@@ -4,7 +4,7 @@ import time
 
 import ray
 
-ray.init(_node_ip_address='172.17.0.2:6379')
+ray.init(address='172.17.0.2:6379')
 
 
 print('''This cluster consists of
