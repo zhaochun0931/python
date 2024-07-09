@@ -4,9 +4,10 @@ import time
 
 import ray
 
-ray.init(address='172.17.0.2:6379')
+ray.init(_node_ip_address='172.17.0.2:6379')
 
-print('''This cluster consists o    f
+
+print('''This cluster consists of
     {} nodes in total
     {} CPU resources in total
 '''.format(len(ray.nodes()), ray.cluster_resources()['CPU']))
