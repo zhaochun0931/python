@@ -22,6 +22,10 @@ update-alternatives --config python3
 
 
 
+# centos
+
+
+
 
 
 
