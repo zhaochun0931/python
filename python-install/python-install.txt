@@ -1,3 +1,24 @@
+apt-get install software-properties-common
+
+
+
+
+# instll from the source code
+wget https://www.python.org/ftp/python/3.13.0/Python-3.13.0.tgz
+tar -xzvf Python-3.13.0.tgz
+cd Python-3.13.0/
+./configure --enable-optimizations
+make
+make altinstall
+/usr/local/bin/python3.13 --version
+
+
+
+
+
+
+
+
 python3 --version
 
 
