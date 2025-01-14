@@ -17,9 +17,6 @@ ws['A1'] = 100
 ws['A2'] = datetime.datetime.now()
 
 
-# input the value to the cell
-ws.cell(row=3, column=3).value = 300
-ws.cell(10,8).value = 400
 
 
 # merge some cells
