@@ -6,13 +6,41 @@ file_path = '111.xlsx'  # Replace with the path to your file
 wb = openpyxl.load_workbook(file_path)
 
 # Get the sheet names
-sheet_names = wb.sheetnames
+ws = wb.sheetnames
 
 # Print the sheet names and count
-print(f"The workbook contains {len(sheet_names)} sheet(s).")
-print("Sheet names:", sheet_names)
+print(f"The workbook contains {len(ws)} sheet(s).")
+print("Sheet names:", ws)
 
-for i in range(len(sheet_names)):
-    sheet_temp_name = sheet_names[i]
+for i in range(len(ws)):
+    sheet_temp_name = ws[i]
     sheet = wb[sheet_temp_name]
-    print(sheet_names[i], sheet.max_column, sheet.max_row)
+    print(ws[i], sheet.max_column, sheet.max_row)
+
+
+
+
+
+
+
+# wb_new = openpyxl.Workbook()
+# sheet_new = wb_new.active
+
+
+for i in ws:
+    my_ws = wb[i]
+    print(my_ws)
+    my_column = my_ws.max_column
+    my_row = my_ws.max_row
+
+    print(my_ws, my_row, my_column)
+
+
+for i in range(len(ws)):
+    print(i)
+
+for i in range(len(ws)):
+    print(ws[i])
+
+
+
