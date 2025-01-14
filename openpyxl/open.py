@@ -13,6 +13,7 @@ print(f"The workbook contains {len(ws)} sheet(s).")
 print("Sheet names:", ws)
 
 for i in range(len(ws)):
+    print(i)
     sheet_temp_name = ws[i]
     sheet = wb[sheet_temp_name]
     print(ws[i], sheet.max_column, sheet.max_row)
@@ -34,13 +35,3 @@ for i in ws:
     my_row = my_ws.max_row
 
     print(my_ws, my_row, my_column)
-
-
-for i in range(len(ws)):
-    print(i)
-
-for i in range(len(ws)):
-    print(ws[i])
-
-
-
