@@ -35,3 +35,5 @@ for i in ws:
     my_row = my_ws.max_row
 
     print(my_ws, my_row, my_column)
+    print(sheet.cell(3,2))
+    print(sheet.cell(3,2).value)
