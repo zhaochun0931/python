@@ -20,4 +20,4 @@ print(data)
 data.to_excel(f'{stock_symbol}_stock_data.xlsx', index=True)
 
 
-#data.to_excel('data.xlsx', index=False)
+#data.to_excel('data.xlsx', index=True)
