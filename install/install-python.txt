@@ -30,6 +30,13 @@ update-alternatives --config python3
 
 
 
+apt install -y python3
+apt install -y python3-pip
+
+
+
+
+
 
 
 python3 --version
